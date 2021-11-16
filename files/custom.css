@@ -73,7 +73,8 @@ th {
       .dashboard-person-slider__slider{width: 43%;}
       .dashboard-person-slider__slider .swiper-slide {max-height: 100%;}
       .dashboard-person-slider__slider .swiper-wrapper{max-height: 440px; height: 100%;}
-      .dashboard-person-slider__slider .swiper-slide>img{height: 100%; object-fit: cover;}
+      .dashboard-person-slider__slider .swiper-slide{background:#fff}
+      .dashboard-person-slider__slider .swiper-slide>img{height: 100%; object-fit: contain;}
     .stat-info + .cperson{margin-top: 0; padding-top: 24px; padding-bottom: 0;}
     .cpersons{margin: 0;}
     .cperson__inner{}
