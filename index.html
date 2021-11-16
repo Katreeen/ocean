@@ -1451,8 +1451,6 @@
                                        </div>
                                     </div>
 
-
-
                                     <div class="dashboard-person-slider__slider">
                                       <div class="swiper-slider swiper-slider--main lk text-align-center" data-slider-autoplay="3000"
                                            data-slider-speed="700"
@@ -1466,44 +1464,34 @@
                                             <a href="#" class="swiper-slide">
                                               <img loading="lazy" src="./files/e574f494ad00e86c8254f8.jpg" alt=""/>
                                             </a>
-                                                                                                                                                  <a href="#" class="swiper-slide swiper-lazy">
+                                                                                                                                                   <a href="#" class="swiper-slide swiper-lazy">
                                               <img loading="lazy" class="swiper-lazy" data-src="./files/6a40bf6b2c783e39621510.jpg" src="/assets/pic/blank.png" alt=""/>
                                               <div class="swiper-lazy-preloader"></div>
                                             </a>
-                                                                                                                  <a href="#" class="swiper-slide swiper-lazy">
-                                                              <img loading="lazy" class="swiper-lazy" data-src="./files/79ecb7911c29dc451fc14e.jpg" src="/assets/pic/blank.png" alt=""/>
-                                                              <div class="swiper-lazy-preloader"></div>
-                                                          </a>
-                                                                                                                  <a href="#" class="swiper-slide swiper-lazy">
-                                                              <img loading="lazy" class="swiper-lazy" data-src="./files/9517646b8d3901402d0f1f.jpg" src="/assets/pic/blank.png" alt=""/>
-                                                              <div class="swiper-lazy-preloader"></div>
-                                                          </a>
-                                                                                                                  <a href="#" class="swiper-slide swiper-lazy">
-                                                              <img loading="lazy" class="swiper-lazy" data-src="./files/28bb7e7b7a4496880a5b12.jpg" src="/assets/pic/blank.png" alt=""/>
-                                                              <div class="swiper-lazy-preloader"></div>
-                                                          </a>
-                                                                                                                  <a href="#" class="swiper-slide swiper-lazy">
-                                                              <img loading="lazy" class="swiper-lazy" data-src="./files/9465e1c08c9e50cac40593.jpg" src="/assets/pic/blank.png" alt=""/>
-                                                              <div class="swiper-lazy-preloader"></div>
-                                                          </a>
+                                                                                                                                                   <a href="#" class="swiper-slide swiper-lazy">
+                                              <img loading="lazy" class="swiper-lazy" data-src="./files/79ecb7911c29dc451fc14e.jpg" src="/assets/pic/blank.png" alt=""/>
+                                              <div class="swiper-lazy-preloader"></div>
+                                            </a>
+                                                                                                                                                   <a href="#" class="swiper-slide swiper-lazy">
+                                              <img loading="lazy" class="swiper-lazy" data-src="./files/9517646b8d3901402d0f1f.jpg" src="/assets/pic/blank.png" alt=""/>
+                                              <div class="swiper-lazy-preloader"></div>
+                                            </a>
+                                                                                                                                                   <a href="#" class="swiper-slide swiper-lazy">
+                                              <img loading="lazy" class="swiper-lazy" data-src="./files/28bb7e7b7a4496880a5b12.jpg" src="/assets/pic/blank.png" alt=""/>
+                                              <div class="swiper-lazy-preloader"></div>
+                                            </a>
+                                                                                                                                                   <a href="#" class="swiper-slide swiper-lazy">
+                                                <img loading="lazy" class="swiper-lazy" data-src="./files/9465e1c08c9e50cac40593.jpg" src="/assets/pic/blank.png" alt=""/>
+                                                <div class="swiper-lazy-preloader"></div>
+                                            </a>
                                                                       
-                                              </div>
-                                              <div class="swiper-pagination"></div>
+                                          </div>
+                                          <div class="swiper-pagination"></div>
                                           </div>
                                           <div class="swiper-slider__prev wide swiper-slider__prev--small swiper-button-prev"><i class="icon-chevron-left"></i></div>
                                           <div class="swiper-slider__next wide swiper-slider__next--small swiper-button-next"><i class="icon-chevron-right"></i></div>
                                       </div>
                                   </div>
-
-
-
-
-
-
-
-
-
-
                                  </div>
                               </div>
                            </div>
@@ -1556,8 +1544,46 @@
                                   <span class="-gray -bold">524 000.00 ₽</span>
                                 </div>
                               </div>
+                      
+                              <a href="#" class="link-more payments-more">Смотреть все</a>
                              </div>
                           </div>
+                          <script>
+                            const paymentsItem = document.querySelectorAll('.payments_item');
+                            const linkMorePayments = document.querySelector('.payments-more');
+                            console.log(paymentsItem.length);
+                            function hideBlocks() {
+                              if (window.innerWidth <= 1470 || paymentsItem.length > 3) {
+                                linkMorePayments.style.display = 'block';
+                                paymentsItem.forEach((element, index) => {
+                                  if (index >= 2 && window.innerWidth <= 1470 ){
+                                    element.classList.add("-hidden");
+                                  }
+                                  if (index >= 3 && paymentsItem.length >= 3 ){
+                                    element.classList.add("-hidden");
+                                  }
+                                });
+                              }
+                            }
+                            function toggleBlocks(event) {
+                              event.preventDefault();
+                              if(linkMorePayments.classList.contains("active")){
+                                linkMorePayments.classList.remove("active");
+                                hideBlocks();
+                                linkMorePayments.innerHTML="Смотреть все";
+                              }else{
+                                linkMorePayments.classList.add("active");
+                                paymentsItem.forEach((element) => {
+                                  element.classList.remove("-hidden");
+                                });
+                                linkMorePayments.innerHTML="Скрыть";
+                              }
+                              
+                            }
+                            hideBlocks();
+                            linkMorePayments.addEventListener("click", toggleBlocks, false);
+                           
+                          </script>
                            <div class="cpersons mt20">
                               <div class="cpersons__inner">
                                  <div class="cperson cperson--bordered cperson--horz">
@@ -3939,7 +3965,7 @@
          </div>
          <a class="popup-close popup__close" href="https://www.oceangifts.ru/personal#"><i class="icon-cross-slim"></i></a>
       </div>
-      <script src="./files/custom.js"></script>
+      <script src="./files/custom.js"></>
       <script type="text/javascript">
          $.ajaxSetup({
              headers: {
