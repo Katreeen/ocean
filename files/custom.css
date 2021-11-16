@@ -60,12 +60,26 @@ th {
 .new_list {
     display: none;
 }
-.dashboard-person-slider{align-items: flex-start;}
-  .dashboard-person-slider__persons{}
+/* .sidebar--left+.content--fullwidth{margin-left: 220px;} */
+.dashboard-person-slider{align-items: flex-start; height: 100%;}
+  .dashboard-person-slider__persons{padding-right: 20px; max-width: 716px;}
+  
+  .cpersons__inner{margin: 0;}
+    .stat-info{border-bottom: 1px solid rgba(102, 102, 102, 0.2); padding-bottom: 25px; margin: 0;}
+      .stat-info__inner{margin: 0;}
+      .stat-info__inner.flex{justify-content: space-between;}
+      .stat-info__item-content--small{padding-bottom: 5px;}
+      .stat-info__item{padding: 0;}
+      .dashboard-person-slider__slider{width: 43%;}
+      .dashboard-person-slider__slider .swiper-slide {max-height: 100%;}
+      .dashboard-person-slider__slider .swiper-wrapper{max-height: 440px; height: 100%;}
+      .dashboard-person-slider__slider .swiper-slide>img{height: 100%; object-fit: cover;}
+    .stat-info + .cperson{margin-top: 0; padding-top: 24px; padding-bottom: 0;}
+    .cpersons{margin: 0;}
     .cperson__inner{}
-
+    .cperson.cperson--horz{margin-top: 0;}
       .cperson--horz .cperson__image{background: #F4F4F4; display: flex; align-items: center; justify-content: center; width: 70px; height: 70px;}
-
+      .cperson{padding: 7px 0;}
       .cperson__info{}
       .cperson--horz .cperson__info{margin-left: 100px;}
         .dashboard{display: flex; align-items: center;}
@@ -80,10 +94,10 @@ th {
             .cperson--horz .cperson__info .tip{margin-left: 37px; width: 318px; border-radius: 5px; background: #F3F3F5;}
             .dashboard-company-block{color: #ACACAC; font-size: 15px; line-height: 20px;}
               .dashboard-company-name{color: #666666; font-weight: bold; line-height: 20px; font-size: 15px; }
-          .-manager{margin-top: 18px; border-radius: 5px; background: #F3F3F5; padding: 30px; position: relative; max-width: 534px;}
-          .-manager:before{position: absolute;  left: 20px;  width: 0; height: 0; border-style: solid; border: 14px solid transparent; border-bottom: 14px solid #f3f3f5; content: ""; top: -28px; }
+          .-manager{margin-top: 18px; border-radius: 5px; background: #F3F3F5; padding: 28px 30px; position: relative; max-width: 534px;}
+          .-manager:before{position: absolute;  left: 20px;  width: 0; height: 0; border-style: solid; border: 11px solid transparent; border-bottom: 14px solid #f3f3f5; content: ""; top: -24px; }
           .-manager .cperson__title{color: #666666; font-size: 20px; line-height: 25px; font-weight: bold;}
-          .cperson--horz .cperson__params{margin-top: 30px; column-count: 1; column-gap: 0;}
+          .cperson--horz .cperson__params{margin-top: 24px; column-count: 1; column-gap: 0;}
             .cperson__param{line-height: 28px; font-size: 15px; position: relative; padding-left: 33px;}
             .cperson__param.-phone{color: #ACACAC; font-weight: bold;}
             .cperson__param.-phone:before{content: ''; background: url(../files/ic-phone.svg) no-repeat; position: absolute; top: 50%; left: 0; width: 16px; height: 16px; transform: translateY(-50%);}
@@ -104,10 +118,19 @@ th {
       .dashboard_block_payments .-gray{color: #666;}
       .dashboard_block_payments .-bold{color: #666; font-weight: bold;}
       .payments_item_sum span + span{font-size: 20px; margin-left: 9px;}
-
+@media(max-width:1439px){
+  .dashboard-person-slider__persons{width: 50%;}
+  .dashboard-person-slider__slider{width: 50%;}
+  .dashboard{flex-wrap: wrap;}
+  .cperson--horz .cperson__info .tip{margin: 15px auto 0;}
+}
 @media(max-width:1200px){
   .cperson--horz .cperson__info .tip{width: auto; margin-left: 10px;}
   .payments_item{margin-bottom: 20px;}
+}
+@media(max-width:1000px){
+  .dashboard-person-slider__persons{width: 100%;}
+  .dashboard-person-slider__slider{width: 100%;}
 }
 @media(max-width:575px){
   .cperson-col{min-width: 140px;}
@@ -123,4 +146,5 @@ th {
   .payments_item{width: 100%;}
   .cperson-tip .tip--arrow-left:before { position: absolute; top: 40%; right: 100%; margin-right: -1px ; width: 0; height: 0; border-style: solid; border-width: 8px 9px 8px 0; border-color: transparent #f0eff5 transparent transparent; content: ""; display: block!important;}
   .cperson--horz .cperson__info .tip{margin-top: 0;}
+  .dashboard{flex-wrap: nowrap;}
 }
