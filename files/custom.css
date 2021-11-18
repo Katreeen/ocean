@@ -169,3 +169,44 @@ th {
   .cperson--horz .cperson__info .tip{margin-top: 0;}
   .dashboard{flex-wrap: nowrap;}
 }
+
+
+/* decor New Year */
+body{padding-top: 70px; max-width: 1920px; margin: auto;}
+
+.head-decor { position: absolute; top: 0; left: 0; height: 84px; width: 100%; overflow: hidden;  display: flex; justify-content: center; z-index: 999; min-width: 1920px;}
+
+.head-decor__inner{position: relative; display: block;}
+
+.head-decor__inner_n1{ background: url(../new-year/decor01.png) repeat-x 0 0; width: 389px; height: 84px;}
+.head-decor__inner_n2 {background: url(../new-year/decor02.png) repeat-x 0 0; width: 392px; height: 83px;}
+.head-decor__inner_n3{ background: url(../new-year/decor03.png) repeat-x 0 0; width: 392px; height: 83px;}
+.head-decor__inner_n4{ background: url(../new-year/decor04.png) repeat-x 0 0; width: 392px; height: 83px;}
+.head-decor__inner_n5{ background: url(../new-year/decor05.png) repeat-x 0 0; width: 390px; height: 82px;}
+  .ball {position: absolute; }
+    .ball_n1 {top: 0; left: 11px; width: 36px; height: 60px; }
+    .ball_n2 { top: 0; left: 88px; width: 37px; height: 55px; }
+    .ball_n3 { top: 0; left: 157px; width: 37px; height: 55px; }
+    .ball_n4 { top: 0; left: 204px; width: 37px; height: 48px; }
+    .ball_n5 { top: 0; left: 296px; width: 37px; height: 42px; }
+    .ball_n6 { top: 0; right: 0; width: 37px; height: 39px; }
+      .ball_n1 .ball__i {background: url(../new-year/balls/ball1.png) no-repeat; }
+      .ball_n2 .ball__i {background: url(../new-year/balls/ball2.png) no-repeat; }
+      .ball_n3 .ball__i {background: url(../new-year/balls/ball3.png) no-repeat; }
+      .ball_n4 .ball__i {background: url(../new-year/balls/ball4.png) no-repeat; }
+      .ball_n5 .ball__i {background: url(../new-year/balls/ball5.png) no-repeat; }
+      .ball_n6 .ball__i {background: url(../new-year/balls/ball6.png) no-repeat; }
+  .ball__i { position: absolute; width: 100%; height: 100%; -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -o-transform-origin: 50% 0; transform-origin: 50% 0; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; pointer-events: none; }
+
+  .ball_bounce .ball__right { position: absolute; top: 0; right: 0; left: 50%; bottom: 0; z-index: 9; }
+  .ball_bounce:hover .ball__right { display: none; }
+  .ball_bounce .ball__right:hover { left: 0; display: block !important; }
+  .ball_bounce.bounce>.ball__i { -webkit-transform: rotate(-9deg); -moz-transform: rotate(-9deg); -o-transform: rotate(-9deg); transform: rotate(-9deg); }
+  .ball_bounce .ball__right.bounce+.ball__i { -webkit-transform: rotate(9deg); -moz-transform: rotate(9deg); -o-transform: rotate(9deg); transform: rotate(9deg); }
+  .ball_bounce.bounce1>.ball__i { -webkit-transform: rotate(6deg); -moz-transform: rotate(6deg); -o-transform: rotate(6deg); transform: rotate(6deg); }
+  .ball_bounce .ball__right.bounce1+.ball__i { -webkit-transform: rotate(-6deg); -moz-transform: rotate(-6deg); -o-transform: rotate(-6deg); transform: rotate(-6deg); }
+  .ball_bounce.bounce2>.ball__i { -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -o-transform: rotate(-3deg); transform: rotate(-3deg); }
+  .ball_bounce .ball__right.bounce2+.ball__i { -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -o-transform: rotate(3deg); transform: rotate(3deg); }
+  .ball_bounce.bounce3>.ball__i { -webkit-transform: rotate(1.5deg); -moz-transform: rotate(1.5deg); -o-transform: rotate(1.5deg); transform: rotate(1.5deg); }
+  .ball_bounce .ball__right.bounce3+.ball__i { -webkit-transform: rotate(-1.5deg); -moz-transform: rotate(-1.5deg); -o-transform: rotate(-1.5deg); transform: rotate(-1.5deg); }
+
